@@ -16,6 +16,7 @@ const addTask = function(event) {
  task.innerHTML = titleTask;
  ul.appendChild(task);
  input.value = "";
+ tasksNumber.textContent = tasksList.length;
  }
 
 form.addEventListener('submit', addTask)
