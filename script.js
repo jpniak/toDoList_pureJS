@@ -13,10 +13,17 @@ const addTask = function(event) {
  if (titleTask === "") return;
  const task = document.createElement('li');
  task.className = 'task';
- task.innerHTML = titleTask;
+ task.innerHTML = titleTask + " <button>Delete</button>";
  ul.appendChild(task);
  input.value = "";
  tasksNumber.textContent = tasksList.length;
+ task.querySelector('button').addEventListener('click', deleteTask);
  }
+
+/* Removing chosen task from the list */
+const deleteTask = function() {
+ this.parentNode.remove();
+ tasksNumber.textContent = tasksList.length;
+}
 
 form.addEventListener('submit', addTask)
