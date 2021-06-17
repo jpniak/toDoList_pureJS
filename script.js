@@ -26,4 +26,8 @@ const deleteTask = function() {
  tasksNumber.textContent = tasksList.length;
 }
 
-form.addEventListener('submit', addTask)
+form.addEventListener('submit', addTask);
+
+
+
+
